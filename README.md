@@ -51,7 +51,7 @@ matrix corresponds to one object. Camera parameters are provided, both the intri
 pose. The dataset provides Ground Truth ellipsoids for the objects, which can be used to assess the accuracy of the 
 estimated ellipsoids. 
 
-##Running the demo
+## Running the demo
 You can run the demo by executing the following steps inside the LfD root directory.  
 The demo will plot Ground-Truth and estimated ellipses on the input images, as well as a 3D visualisation of the scene, 
 including camera poses and Ground-Truth and estimated ellipsoids. Plots will be displayed as well as saved in the Output 
@@ -67,7 +67,6 @@ In order to run LfD on your data, you should create a new directory inside the *
 You should populate the new directory with your data, replicating the structure used for the demo data. Then, you should 
 set the variable **dataset** in **main.py** to the name of the newly created directory.  
 When running LfD, the output data will be automatically stored in **Lfd/Output/MyTest**. 
-
 
 For further information please visit the webpage of the project:
 https://vgm.iit.it/code/3d-object-localisation-from-multi-view-image-detections
