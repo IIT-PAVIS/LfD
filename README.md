@@ -1,6 +1,6 @@
 # LfD - Localisation from Detections
 ## Introduction
-This code is a Python implementation of the work described in:
+This code is a Python implementation of the work described in:  
 [3D Object Localisation from Multi-view Image Detections](https://ieeexplore.ieee.org/document/7919240) (TPAMI 2017).
 
 <img src="https://vgm.iit.it/storage/code/intro_pami_2017.png" alt="LfD_image_0" width="400"/><img src="https://vgm.iit.it/storage/code/tango_indoor_pami_2017.png" alt="LfD_image_1" width="400"/>  
@@ -66,6 +66,3 @@ In order to run LfD on your data, you should create a new directory inside the *
 You should populate the new directory with your data, replicating the structure used for the demo data. Then, you should 
 set the variable **dataset** in **main.py** to the name of the newly created directory.  
 When running LfD, the output data will be automatically stored in **LfD/Output/MyTest**. 
-
-For further information please visit the webpage of the project:
-https://vgm.iit.it/code/3d-object-localisation-from-multi-view-image-detections
