@@ -28,7 +28,7 @@ organization={IEEE}
 ```
 This version of the code was ported to Python by [Matteo Taiana](https://iit.it/people/matteo-taiana).
 
-##Installation:
+## Installation:
 To install LfD inside a new Conda environment, please execute the following steps.  
 Installation was tested on Ubuntu 20.04, but should work on other OS's as well.  
 ```
@@ -38,7 +38,7 @@ conda install pip
 pip install -r requirements.txt
 ```
 
-##Demo dataset
+## Demo dataset
 The data is a reformatted version of the demo dataset which accompanies the paper:
 ```
 A. Aldoma, T. Faulhammer, and M. Vincze, “Automation of
@@ -61,7 +61,7 @@ conda activate LfD
 python main.py
 ```
 
-##Running LfD on your data
+## Running LfD on your data
 In order to run LfD on your data, you should create a new directory inside the **Data** directory, e.g., 
 **LfD/Data/MyTest**. 
 You should populate the new directory with your data, replicating the structure used for the demo data. Then, you should 
