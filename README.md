@@ -3,8 +3,8 @@
 This code is a Python implementation of the work described in:
 [3D Object Localisation from Multi-view Image Detections](https://ieeexplore.ieee.org/document/7919240) (TPAMI 2017).
 
-<img src="https://vgm.iit.it/storage/code/intro_pami_2017.png" alt="LfD_image_0" width="400"/>
-<img src="https://vgm.iit.it/storage/code/tango_indoor_pami_2017.png" alt="LfD_image_1" width="400"/>  
+<img src="https://vgm.iit.it/storage/code/intro_pami_2017.png" alt="LfD_image_0" width="350"/>
+<img src="https://vgm.iit.it/storage/code/tango_indoor_pami_2017.png" alt="LfD_image_1" width="350"/>  
 
 **Abstract**  
 In this work we present a novel approach to recover objects 3D position and occupancy in a generic scene using only 2D
