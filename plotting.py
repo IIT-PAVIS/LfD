@@ -1,8 +1,18 @@
-import numpy as np
+""" plotting - This module contains code used for visualising the results of LfD.
+
+IIT - Italian Institute of Technology.
+Pattern Analysis and Computer Vision (PAVIS) research line.
+
+Ported to Python by Matteo Taiana.
+"""
+
+
 import math
+from pathlib import Path
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse
-from pathlib import Path
+import matplotlib.patches as mpatches
+import numpy as np
 
 from lfd import dual_ellipse_to_parameters, project_ellipsoids, dual_quadric_to_ellipsoid_parameters
 
@@ -138,7 +148,6 @@ def plot_camera(M, figure_axes):
     z = points[2, :].reshape(2, 5)
 
     figure_axes.plot_wireframe(x, y, z,  rstride=1, cstride=1,  color=[0, 0, 0], linewidth=0.5)
-    return
 
 
 def plot_3D_scene(estQs, gtQs, Ms_t, dataset, save_output_images):
@@ -154,7 +163,7 @@ def plot_3D_scene(estQs, gtQs, Ms_t, dataset, save_output_images):
     for ellipsoid_id in range(estQs.shape[0]):
         # Plot only if the data is valid
         if not ((np.isnan(estQs[ellipsoid_id, :, :])).any()):
-            points = plot_ellipsoid(estQs[ellipsoid_id, :, :], [0, 0, 1], figure_axes)
+            _ = plot_ellipsoid(estQs[ellipsoid_id, :, :], [0, 0, 1], figure_axes)
 
     # Plot the camera poses in black.
     for pose_id in range(Ms_t.shape[0]//4):
@@ -163,6 +172,10 @@ def plot_3D_scene(estQs, gtQs, Ms_t, dataset, save_output_images):
     figure_axes.set_xlabel('X axis')
     figure_axes.set_ylabel('Y axis')
     figure_axes.set_zlabel('Z axis')
+
+    red_patch = mpatches.Patch(color='red', label='GT')
+    blue_patch = mpatches.Patch(color='blue', label='Estimates')
+    plt.legend(handles=[red_patch, blue_patch])
 
     # This forces axes to be equal, but also forces the scene to be a cube.
     # MatPlotLib does not have an "axes equal" function.

@@ -1,3 +1,21 @@
+"""main - Localisation from Detections - Main demo file.
+
+This is the script to be used for running a demo of the project.
+
+IIT - Italian Institute of Technology.
+Pattern Analysis and Computer Vision (PAVIS) research line.
+
+If you use this project for your research, please cite:
+@inproceedings{rubino2017pami,
+title={3D Object Localisation from Multi-view Image Detections},
+author={Rubino, Cosimo and Crocco, Marco and Del Bue, Alessio},
+booktitle={Pattern Analysis and Machine Intelligence (TPAMI), 2017 IEEE Transactions on},
+year={2017},
+organization={IEEE}
+
+Ported to Python by Matteo Taiana.
+"""
+
 import pickle
 import numpy as np
 from matplotlib import pyplot as plt
@@ -5,21 +23,6 @@ from matplotlib import pyplot as plt
 from lfd import compute_estimates
 from plotting import plot_est_and_gt_ellipses_on_images, plot_3D_scene
 
-'''LfD - Localisation from Detections.
-
-IIT - Italian Institute of Technology.
-Pattern Analysis and Computer Vision (PAVIS) research line.
-
-If you use this project for your research, please cite:
-@inproceedings{rubino2017pami,  
-title={3D Object Localisation from Multi-view Image Detections},  
-author={Rubino, Cosimo and Crocco, Marco and Del Bue, Alessio},  
-booktitle={Pattern Analysis and Machine Intelligence (TPAMI), 2017 IEEE Transactions on},  
-year={2017},  
-organization={IEEE}  
-
-Ported to Python by Matteo Taiana.
-'''
 
 ####################
 # 0. Introduction. #

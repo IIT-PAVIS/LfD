@@ -1,5 +1,13 @@
-import numpy as np
+""" lfd - This module contains the functions that implement the LfD algorithm.
+
+IIT - Italian Institute of Technology.
+Pattern Analysis and Computer Vision (PAVIS) research line.
+
+Ported to Python by Matteo Taiana.
+"""
+
 import math
+import numpy as np
 
 
 def dual_quadric_to_ellipsoid_parameters(Q):
@@ -433,7 +441,7 @@ def compute_estimates(bbs, K, Ms_t, visibility):
     """
 
     # Get the number of frames and the number of objects from the size of the visibility matrix.
-    n_frames = visibility.shape[0]
+    # n_frames = visibility.shape[0]  # Not needed. Left as documentation.
     n_objects = visibility.shape[1]
 
     # Compute the stacked and transposed projection matrices.
